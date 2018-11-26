@@ -1,0 +1,51 @@
+- let isFirst;
+
+mixin format(data, index, first)
+    if (data.isZero)
+        return
+    else
+        if (index != null || index == null && !data.isZero)
+            if (data.isPositive)
+                if (!first)
+                    |&nbsp;+
+            else
+                |&nbsp;-
+                
+            if (!first)
+                |&nbsp;
+                
+            if (index == null)
+                |#{data.abs}
+            else
+                if (!data.isOne)
+                    |#{data.abs}
+                |x#[sub= index]
+            
+            if (first)
+                - isFirst = false;
+
+- for (let i = 0; i < left.length; i++)
+    - isFirst = true;
+    p x#[sub= left[i]] = 
+        +format(data[i][0].reflect, top[0], isFirst)
+        
+        - for (let j = 1; j <= top.length; j++)
+            if (j == top.length)
+                +format(data[i][j], top[j], isFirst)
+            else
+                +format(data[i][j].reflect, top[j], isFirst)
+
+hr
+
+.linear-form
+    - isFirst = true;
+    p L(x) = 
+        +format(linearForm[0], 1, isFirst)
+        - for (let i = 1; i < linearForm.length - 1; i++)
+            +format(linearForm[i], i + 1, isFirst)
+        |&nbsp;=
+    - isFirst = true;
+    p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 
+        +format(bottomRow[0], top[0], isFirst)
+        - for (let i = 1; i < bottomRow.length; i++)
+            +format(bottomRow[i], top[i], isFirst)

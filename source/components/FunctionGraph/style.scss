@@ -1,0 +1,64 @@
+.function-graph-wrap {
+    display: flex;
+    cursor: grab;
+    position: fixed;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 99999;
+
+    &.grabbing {
+        cursor: grabbing;
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    button#cancel-graph {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 0px;
+        font-size: 7pt;
+        height: 12px;
+        width: 12px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: red;
+        color: white;
+        border: 0;
+        border-radius: 10px;
+    }
+
+    canvas.function-graph {
+        cursor: default;
+        border: 1px solid #000;
+    }
+
+    .functions {
+        cursor: default;
+        margin-left: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        width: 200px;
+        background-color: white;
+        overflow: auto;
+
+        .func {
+            white-space: nowrap;
+        }
+
+        span.color {
+            display: inline-block;
+            border: 1px solid #000;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

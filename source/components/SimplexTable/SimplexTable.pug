@@ -1,0 +1,38 @@
+-
+    let topLen = top.length,
+        leftLen = left.length;
+fieldset.SimplexTable
+    table
+        tr
+            td x#[sup (#{step})]
+            - for (let j = 0; j < topLen; j++)
+                td x#[sub= top[j]]
+            td
+        - for (let i = 0; i < leftLen; i++)
+            tr
+                td x#[sub= left[i]]
+                - for (let j = 0; j <= topLen; j++)
+                    -
+                        let inputClassName = undefinIed,
+                            indexes = undefined;
+                        if (referenceElements != null)
+                            for (let k = 0; k < referenceElements.length; k++)
+                                for (let row = 0; row < referenceElements.rows[k].length; row++)
+                                    if (
+                                        referenceElements.rows[k][row] == i &&
+                                        referenceElements.cols[k] == j
+                                    ) {
+                                        inputClassName = 'reference-element';
+                                        indexes = referenceElements.rows[k][row] + ',' + referenceElements.cols[k];
+                                        break;
+                                    }
+                    td(
+                        class = inputClassName,
+                        data-indexes = indexes
+                    )= data[i][j]
+        tr
+            td
+            - for (let j = 0; j <= topLen; j++)
+                td= data[leftLen][j]
+    if message
+        .message= message

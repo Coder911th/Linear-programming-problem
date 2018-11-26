@@ -1,0 +1,19 @@
+@import "../../style-settings.scss";
+
+#my-basis {
+    border: 1px solid $common-border-color;
+    box-shadow: 0 0 10px $common-border-color;
+    margin: 10px !important;
+    padding: 5px !important;
+    display: flex;
+    flex-wrap: wrap;
+
+    label {
+        display: inline-block !important;
+        margin-right: 5px !important;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $common-border-color;
+    outline: none;
+    margin-right: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 14px;
+    border: 0 solid $common-input-bg-disabled;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotateZ(45deg);
+    margin: -6px 1px;
+    pointer-events: none;
+}
+
+input[type="radio"] {
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    background: $common-input-bg-disabled;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+    pointer-events: none;
+}

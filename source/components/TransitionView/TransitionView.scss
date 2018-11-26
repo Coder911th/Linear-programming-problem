@@ -1,0 +1,33 @@
+@import '../../style-settings.scss';
+
+.TransitionView {
+    border: 1px solid $common-border-color;
+    margin-bottom: 20px;
+    font-size: 18pt;
+
+    p {
+        cursor: default;
+        margin: 10px 0;
+        padding-left: 10px;
+        line-height: 18pt;
+    }
+
+    hr {
+        border-color: $common-border-color;
+    }
+
+    .linear-form {
+        p {
+            font-weight: bold;
+            line-height: 7pt;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.matrix-view
+    fieldset(disabled)
+        table
+            tbody
+                - for (let row = 0; row < matrix.length; row++)
+                    tr
+                        - for (let data = 0; data < matrix[row].length; data++)
+                            td= matrix[row][data]

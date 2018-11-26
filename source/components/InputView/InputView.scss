@@ -1,0 +1,69 @@
+$bad-input-color: red;
+
+fieldset.InputView {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-right: 0;
+    cursor: default;
+
+    div {
+        div {
+            white-space:nowrap;
+            margin-bottom: 5px;
+            span {
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                sub {
+                    font-size: 0.7em;
+                }
+            }
+
+            input {
+                margin-right: 1px;
+                text-align: center;
+
+                &.bad-input {
+                    background-color: $bad-input-color;
+                }
+
+                &::placeholder {
+                    color: rgba(0, 42, 55, 0.63);
+                }
+            }
+
+        }
+    }
+
+    div {
+        .arrow {
+            position: absolute;
+        }
+
+        .left {
+            top: -23px;
+            left: -5px;
+            transform: rotate(180deg);
+        }
+
+        .right {
+            top: -23px;
+            left: 50px;
+        }
+
+        .up {
+            top: 10px;
+            left: -40px;
+            transform: rotate(-90deg);
+        }
+
+        .down {
+            top: 65px;
+            left: -40px;
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+fieldset.InputView(
+    disabled = !configurable
+)
+    div
+        include add
+        
+    if configurable
+        div
+            canvas.arrow.left(width="50", height="20")
+            canvas.arrow.right(width="50", height="20")
+            canvas.arrow.up(width="50", height="20")
+            canvas.arrow.down(width="50", height="20")
+    
+    div
+        include lastCondition

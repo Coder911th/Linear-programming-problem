@@ -1,0 +1,42 @@
+{
+  "name": "linear-programming-problem",
+  "version": "0.1.0",
+  "description": "The program which solves the linear programming problem",
+  "main": "server/index.js",
+  "author": "Lozhkin Dmitry",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "bundle-loader": "^0.5.5",
+    "css-loader": "^0.28.7",
+    "exports-loader": "^0.6.4",
+    "expose-loader": "^0.7.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "gulp": "^3.9.1",
+    "html-webpack-plugin": "^2.30.1",
+    "imports-loader": "^0.7.1",
+    "node-sass": "^4.7.2",
+    "node-static": "^0.7.10",
+    "postcss-loader": "^2.0.9",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^6.0.6",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "start": "starter.bat",
+    "out": "start starter.bat"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

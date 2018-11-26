@@ -1,0 +1,28 @@
+@import "../../style-settings.scss";
+
+.matrix-view {
+    margin-bottom: 20px;
+
+    fieldset {
+        border: 0;
+        border-right: 3px solid $common-border-color;
+        border-left: 3px solid $common-border-color;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 5px;
+        overflow: hidden;
+
+        table {
+            border-collapse: collapse;
+
+            td {
+                padding: 10px;
+                text-align: center;
+
+                &:last-child {
+                    border-left: 1px solid $common-border-color;
+                }
+            }
+        }
+    }
+}

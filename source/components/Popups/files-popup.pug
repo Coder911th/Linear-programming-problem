@@ -1,0 +1,30 @@
+#popup-wrap
+    #background-block.hidden
+
+    #files-popup.hidden
+        .top
+            .title Список файлов
+            button.cancel(
+                type = 'button'
+            ) x
+        .list
+
+    #waiting-popup.hidden
+        .message
+        button.cancel.hidden(
+            type = 'button'
+        ) x
+
+    #file-save.hidden
+        .title Сохранение файла на сервере
+        .wrap
+            p Введите имя файла
+            input#save-name(
+                type = 'text'
+            )
+            button#send(
+                type = 'button'
+            ) Сохранить
+        button.cancel(
+            type = 'button'
+        ) x

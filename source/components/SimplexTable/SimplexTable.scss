@@ -1,0 +1,86 @@
+@import "../../style-settings.scss";
+
+$reference-elements-color-bg: #60BFBF;
+$reference-elements-color-text: black;
+$reference-elements-color-bg-hover: #6CD9D9;
+$reference-elements-color-text-hover: black;
+$selected-element-color-bg: #00429a;//#458A8A, #00456c
+
+$message-color: rgb(69, 13, 0);
+
+$border-size: 3px;
+
+fieldset.SimplexTable {
+
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0;
+
+    .message {
+        color: $message-color;
+        font-weight: bold;
+        padding: 10px;
+
+    }
+
+    .message::before {
+        content: '!';
+        color: red;
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+
+        sup,
+        sub {
+            font-size: 0.7em;
+        }
+
+        td {
+            border: 1px solid $common-border-color;
+            margin: 0;
+            background-color: $common-input-bg-disabled;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+
+            &.reference-element {
+                cursor: pointer;
+                color: $reference-elements-color-text;
+                background-color: $reference-elements-color-bg;
+
+                &:hover {
+                    color: $reference-elements-color-text-hover;
+                    background-color: $reference-elements-color-bg-hover;
+                }
+            }
+
+            &.selected-element {
+                background-color: $selected-element-color-bg;
+            }
+
+            &:first-child {
+                border-right: $border-size solid $common-border-color;
+                text-align: center;
+            }
+
+            &:last-child {
+                border-left: $border-size solid $common-border-color;
+            }
+        }
+
+        tr:first-child {
+            border-bottom: $border-size solid $common-border-color;
+
+            td {
+                text-align: center;
+            }
+        }
+
+        tr:last-child {
+            border-top: $border-size solid $common-border-color;
+        }
+    }
+}

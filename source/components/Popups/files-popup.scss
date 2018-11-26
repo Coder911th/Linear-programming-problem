@@ -1,0 +1,160 @@
+#popup-wrap {
+
+    & .hidden {
+        display: none !important;
+    }
+
+    button {
+        cursor: pointer;
+        border-color: black;
+        padding: 0 5px 3px 5px;
+        color: $button-color;
+        background: linear-gradient(to top, $button-gradient-from, $button-gradient-to);
+        line-height: 15px;
+        vertical-align: middle;
+
+
+        &:active {
+            background: linear-gradient(to bottom, $button-gradient-from, $button-gradient-to);
+        }
+    }
+
+    button.cancel {
+        position: absolute;
+        top: 7px;
+        right: 9px;
+        border-radius: 10px;
+    }
+
+    #background-block {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #ccc;
+        opacity: 0.5;
+    }
+
+    #files-popup {
+        position: fixed;
+        left: calc(50% - 210px);
+        right: calc(50% - 210px);
+        top: calc(50% - 240px);
+        bottom: calc(50% - 240px);
+
+        z-index: 100;
+        background-color: $common-bg;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid black;
+
+        .top {
+            padding: 10px;
+            font-weight: bold;
+            border-bottom: 1px solid $common-border-color;
+
+            .title {
+                text-align: center;
+            }
+        }
+
+        .list {
+            position: relative;
+            margin: 10px;
+            height: 80%;
+            clear: both;
+            overflow: auto;
+
+            .file {
+                cursor: pointer;
+                line-height: 18pt;
+                background-color: $rangebar-bg;
+                margin-bottom: 10px;
+                padding: 5px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                &:hover {
+                    color: $common-input-color-disabled;
+                    background-color: $common-input-bg-disabled;
+                }
+            }
+        }
+    }
+
+    #waiting-popup {
+        display: flex;
+
+        position: fixed;
+        left: 20%;
+        right: 20%;
+        top: 40%;
+        bottom: 40%;
+
+        z-index: 100;
+        background-color: $common-bg;
+        border-radius: 20px;
+        border: 1px solid black;
+
+        align-items: center;
+        justify-content: center;
+
+        .message {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #file-save {
+        position: fixed;
+        left: calc(50% - 250px);
+        right: calc(50% - 250px);
+        top: calc(50% - 50px);
+        bottom: calc(50% - 50px);
+
+        z-index: 100;
+        background-color: $common-bg;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid black;
+
+        .title {
+            min-height: 20px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .wrap {
+            min-height: 40px;
+            max-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                min-width: 150px;
+                margin-left: 20px;
+                font-style: italic;
+                margin-right: 1%;
+            }
+
+            #send {
+                padding: 5px;
+                width: 100px;
+                margin-left: 10px;
+                margin-right: 20px;
+                line-height: 18pt;
+                border-radius: 3px;
+            }
+
+            input {
+                width: 100%;
+                padding: 5px;
+            }
+        }
+    }
+
+}
